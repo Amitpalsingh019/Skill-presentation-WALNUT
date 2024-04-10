@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer Review - Walnut Grocery Store</title>
+    <link rel="stylesheet" href="css/review.css">
+</head>
+
+<body>
+    <header>
+        <h1>Walnut Grocery Store</h1>
+    </header>
+
+    <div class="nav">
+        <a href="apple.html">HOME</a>
+        <a href="apple2.html">Weekend Sale</a>
+        <a href="apple3.html">Monthly Benefits</a>
+        <a href="apple4.html">Buy One Get One</a>
+        <a href="apple5.html">Careers</a>
+        <a href="123.html">Resources</a>
+        <a href="123456.html">About me</a>
+        <a href="customer_review.php">Customer Reviews</a>
+    </div>
+
+    <section>
+        <h2>Add Customer Review</h2>
+
+        <form id="customer-review-form" class="customer-review-form" action="create.php" method="post">
+            <div class="form-group">
+                <label for="customer-name">Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="member-since">Member Since:</label>
+                <input type="text" id="member-since" name="member-since"  required>
+            </div>
+
+            <div class="form-group">
+                <label for="favorite-product">Favorite Product:</label>
+                <select id="favorite-product" name="favorite-product">
+                    <option value="Fruits"><span class="product-option">Fruits</span></option>
+                    <option value="Vegetables"><span class="product-option"> Vegetables</span></option>
+                    <option value="Meat"><span class="product-option"> Meat</span></option>
+                    <option value="Dairy"><span class="product-option">Dairy</span></option>
+                    <option value="Vegan"><span class="product-option">Vegan</span></option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" required></textarea>
+            </div>
+
+            <button type="submit" class="button">Submit Review</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Walnut Grocery Store. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

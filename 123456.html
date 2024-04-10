@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Walnut Grocery Store</title>
+           <link rel="stylesheet" href="css/home.css">
+           <style>
+            .margin-bottom img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Walnut Grocery Store</h1>
+        </header>
+    
+        <div class="nav">
+            <a href="apple.html">HOME</a>
+            <a href="apple2.html">Weekend Sale</a>
+            <a href="apple3.html">Monthly Benefits</a>
+            <a href="apple4.html">Buy One Get One</a>
+            <a href="apple5.html">Careers</a>
+            <a href="123.html">Resources</a>
+            <a href="123456.html">About me</a>
+            <a href="customer_review.php">Customer Reviews</a>
+       
+        </div>
+        
+        <p><strong>Name:</strong> Amitpal Singh</p>
+        <p><strong>Student ID:</strong> 202105138</p>
+
+        <form id="imageUploadForm" enctype="multipart/form-data">
+            <input type="file" name="profilePicture" id="profilePicture">
+            <input type="submit" value="Upload Picture">
+        </form>
+        
+        <img id="uploadedPicture" class="profile-pic" src="#" alt="Uploaded Picture">
+        
+        <script>
+            document.getElementById('profilePicture').addEventListener('change', function() {
+                var file = this.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        var img = new Image();
+                        img.src = e.target.result;
+                        img.onload = function() {
+                            var canvas = document.createElement('canvas');
+                            var dpi = 72; // DPI of the image
+                            var widthInch = 2; // Width in inches
+                            var heightInch = 2; // Height in inches
+                            var width = dpi * widthInch;
+                            var height = dpi * heightInch;
+        
+                            canvas.width = width;
+                            canvas.height = height;
+                            var ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, width, height);
+        
+                            var resizedDataURL = canvas.toDataURL('image/jpeg', 0.7); // Adjust quality as needed
+        
+                            document.getElementById('uploadedPicture').src = resizedDataURL;
+                        };
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+        
+        <script>
+            document.getElementById("imageUploadForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var fileInput = document.getElementById("profilePicture");
+                var file = fileInput.files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        var img = document.getElementById("uploadedPicture");
+                        img.src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+
+        <h2>My Journey as an International Student Entrepreneur</h2>
+
+        <p>Four years ago, as an international student, I arrived with dreams and aspirations of making a mark in a foreign land. One thing I noticed was the lack of availability of familiar groceries from my home country. Recognizing this gap in the market, I saw an opportunity to start a grocery store catering to international students like myself.</p>
+
+        <p>With determination and relentless effort, I embarked on the journey of entrepreneurship. In the first year, I focused on understanding the market, conducting thorough research, and developing a solid business plan. I utilized my academic knowledge, sought guidance from mentors, and attended business workshops to equip myself with the necessary skills.</p>
+
+        <p>By the second year, I secured funding through a combination of personal savings, loans, and grants available to student entrepreneurs. With the financial backing, I acquired a suitable retail space and began sourcing products from local and international suppliers.</p>
+
+        <p>The third year marked the grand opening of my grocery store. Despite facing challenges such as navigating regulations, building a customer base, and managing operations, I remained resilient. I leveraged digital marketing, word-of-mouth referrals, and community engagement to attract customers.</p>
+
+        <p>Now, in the fourth year of operation, my grocery store has become a thriving hub for international students, offering a diverse range of products, personalized service, and a sense of home away from home. The journey from a newcomer to a successful business owner has been challenging
